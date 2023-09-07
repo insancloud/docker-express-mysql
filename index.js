@@ -13,10 +13,11 @@ const app = express();
 // Create a route to fetch data from the database and send it to the client
 app.get('/get-users', (req, res) => {
   const connection = mysql.createConnection({
-    host: 'db', // Assuming the database is running in a container named 'db'
+    host: 'db',  // Assuming the database is running in a container named 'db'
     user: 'root',
     password: 'barbar',
     database: 'express-db'
+    
   });
 
   connection.connect();

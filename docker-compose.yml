@@ -9,6 +9,8 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     restart: always
+    ports:
+    - "1122"
     environment:
       MYSQL_ROOT_PASSWORD: barbar
   adminer:
@@ -16,4 +18,4 @@ services:
     image: adminer
     restart: always
     ports:
-      - "1122:8080"
+      - "8081:8080"
